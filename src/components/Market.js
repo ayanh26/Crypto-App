@@ -1,21 +1,16 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, Badge } from "react-bootstrap";
 
-const Market = ({ marketData }) => {
+const Market = ({ data }) => {
   return (
     <div>
-      <Card style={{ width: "18rem" }}>
+      <Card style={{ width: "18rem", margin: "auto", marginTop: "3rem" }}>
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Subtitle className="mb-2 text-muted">
-            Card Subtitle
-          </Card.Subtitle>
+          <Card.Title>{data.name}</Card.Title>
+          <Card.Subtitle className="mb-2 text-muted">{data.base}</Card.Subtitle>
           <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            <Badge bg="success">$ {Math.round(data.price_usd)}</Badge>
           </Card.Text>
-          <Card.Link href="#">Card Link</Card.Link>
-          <Card.Link href="#">Another Link</Card.Link>
         </Card.Body>
       </Card>
     </div>

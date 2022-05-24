@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Table } from "react-bootstrap";
-import { axios } from "axios";
+import axios from "axios";
 import Market from "./Market";
 
 const MarketList = () => {
